@@ -71,15 +71,15 @@ main {
     background-color: rgb(0, 0, 0,0.85);
     margin:2px;
     padding:10px 30px 30px 30px;
-    
     /*filter:opacity(0.85);*/
     transition: transform 0.3s ease;
     padding-bottom: 5px;
     max-width: 280px;
+    height: 400px;
     flex-direction: column;  /*Display items in a column layout */
      align-items: center; /*Center items horizontally */
     text-align: center; /* Center text horizontally */
-    
+    justify-content: center;
     position: relative;
 }
 
