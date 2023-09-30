@@ -58,7 +58,8 @@ function populateMovieDatalist(data) {
 
 function recommendMovies() {
     const selectedMovieTitle = document.getElementById("movie-search").value;
-
+    document.getElementById("recommendation-list").style.display = "flex";
+    headingList.innerHTML="<h2>Result</h2>";
     // Find the selected movie by title
     const selectedMovie = movies.find(movie => movie.primaryTitle === selectedMovieTitle);
 
@@ -1032,6 +1033,8 @@ Home.addEventListener("click", function (e) {
     document.getElementById("search-section").style.display = "flex";
     headingList.innerHTML="<h2>Select a show before clicking search</h2>";
     document.getElementById("recommendation-list").style.display = "none";
+    const recommendButton2 = document.getElementById("recommend-button");
+    recommendButton2.addEventListener("click", recommendMovies);
 })
 fetchMovieData().then(data => {
     populateMovieDatalist(data);
